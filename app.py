@@ -10,6 +10,7 @@ db = SQLAlchemy(app)
 
 
 class Task(db.Model):
+    __tablename__ = "task"
     id = db.Column(db.Integer, primary_key=True)
     content = db.Column(db.Text)
     done = db.Column(db.Boolean, default=False)
